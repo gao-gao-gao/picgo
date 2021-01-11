@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/variable.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/login.css" />
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-    <script type="module" src="js/jquery.js"></script>
+    <script type="module" src="js/style.js"></script>
     <script src="js/login.js"></script>
     <script src="js/ajax.js"></script>
     <script src="js/animate.js"></script>
@@ -21,11 +22,13 @@
       <article class="header-top flex">
         <nav class="font-14">
           <h1 class="logo block"></h1>
-          <a href="javascript:;" class="nav-current nav-first"
-            >发现音乐<sub class="cor first-content first"></sub
+          <a href="javascript:;" class="nav-first current" title="tab1"
+            >发现音乐<sub class="cor item block tab1"></sub
           ></a>
-          <a href="javascript:;" class="nav-second">我的音乐</a>
-          <a href="javascript:;" class="nav-second">朋友</a>
+          <a href="javascript:;" title="tab2"
+            >我的音乐<sub class="cor item tab2"></sub
+          ></a>
+          <a href="javascript:;">朋友</a>
           <a href="javascript:;">商城</a>
           <a href="javascript:;">音乐人</a>
           <a href="javascript:;">下载客户端<span class="block hot"></span> </a>
@@ -35,13 +38,13 @@
             ><em></em><input type="text" value="音乐/视频/电台/用户"
           /></span>
           <a href="#">创作者中心</a>
-          <button>登录</button>
+          <button><a href="login.html">登录</a></button>
         </section>
       </article>
     </header>
-
+    <!-- tab栏部分 -->
     <article class="content">
-      <div class="main">
+      <div class="tab1 item block">
         <div class="header-bottom first-nav">
           <div class="bottom-nav">
             <a href="#" class="margin">推荐</a>
@@ -72,17 +75,31 @@
           <!-- 下载客户端 -->
           <div class="upload"></div>
         </div>
-        <div>
-          <input type="text" id="phone" />
-          <input type="text" id="password" />
-          <input type="button" value="点击" class="click" />
-        </div>
       </div>
-      <div class="block mian">
+      <div class="tab2 item">
         <div class="second-content"></div>
       </div>
     </article>
-
+    <button id="window">点击</button>
+    <!-- 登录 -->
+    <article class="login-phone">
+      <section class="login-bar font-14">
+        登录<span class="window-close">X</span>
+      </section>
+      <section class="phone-main">
+        <div class="phone-number">
+          <a href="">+86</a><input type="text" value="输入手机号" id="phone" />
+        </div>
+        <div class="phone-pwd">
+          <input type="text" value="请输入密码" id="pwd" />
+        </div>
+        <div class="title"></div>
+        <button class="phone-btn">登录</button>
+      </section>
+      <section class="phone-bottom">
+        <a href="">&lt;其他登录方式</a> <a href="没有账号？免费注册&gt;"></a>
+      </section>
+    </article>
     <!-- footer部分 -->
     <footer class="flex">
       <section class="footer-left">

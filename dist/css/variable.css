@@ -16,16 +16,21 @@ em,
   height: 7px;
   background-position: -226px 0;
 }
-.main {
-  display: none;
-}
-.block {
-  display: block;
-}
 .font-14 {
   font-size: 14px;
 }
 .nav-current {
   color: #fff;
   background-color: #000;
+}
+.current {
+  outline: 0;
+  background: #000;
+  z-index: 4;
+}
+.item {
+  display: none;
+}
+.block {
+  display: block;
 }

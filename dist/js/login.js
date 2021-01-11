@@ -1,8 +1,8 @@
 /* eslint-disable no-undef */
 window.addEventListener("load", function () {
   let phone = document.getElementById("phone");
-  let password = document.getElementById("password");
-  let btn = document.querySelector(".click");
+  let pwd = document.getElementById("pwd");
+  let btn = document.querySelector(".phone-btn");
 
   btn.onclick = function () {
     ajax({
@@ -11,7 +11,7 @@ window.addEventListener("load", function () {
       url: "http://localhost:3000/login/cellphone",
       params: {
         phone: phone.value,
-        password: password.value,
+        password: pwd.value,
       },
       success: function (res) {
         console.log(res);
