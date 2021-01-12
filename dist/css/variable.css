@@ -34,3 +34,7 @@ em,
 .block {
   display: block;
 }
+.rec-more,
+.recommend {
+  background: url(../img/index.png) no-repeat;
+}

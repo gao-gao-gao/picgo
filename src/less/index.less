@@ -1,4 +1,3 @@
-// 同步测试
 // 头部
 .header-top {
   justify-content: center;
@@ -95,7 +94,7 @@
   border-bottom: 1px solid #a40011;
 
   .bottom-nav {
-    margin-left: 602px;
+    margin-left: 585px;
   }
 
   a {
@@ -116,7 +115,6 @@
 // 轮播图
 
 .carousel {
-  position: relative;
   width: 100%;
   height: 284px;
   background-image: url(../img/carousel_bg1.jpg);
@@ -124,61 +122,66 @@
   background-position: center center;
 }
 
-.btn-left,
-.btn-right {
-  display: none;
-  position: absolute;
-  top: 50%;
-  margin-top: -31px;
-  width: 37px;
-  height: 64px;
-  color: #fff;
-  font-size: 40px;
-  text-align: center;
-  line-height: 64px;
-  z-index: 2;
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.2);
-  }
-}
-
-.btn-left {
-  left: -68px;
-}
-
-.btn-right {
-  right: -68px;
-}
-
 .carousel-main {
-  position: absolute;
-  left: 25%;
-  width: 730px;
-  height: 284px;
-  background-color: #000;
-  overflow: hidden;
+  position: relative;
+  width: 982px;
+  height: 285px;
+  margin: 0 auto;
 
-  img {
-    width: 730px;
-  }
-
-  ul {
-    // 需要添加定位，才能使用element.style.left
+  .slider {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 500%;
+    width: 730px;
+    height: 284px;
+    overflow: hidden;
+
+    ul {
+      // 需要添加定位，才能使用element.style.left
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 500%;
+    }
+
+    ul li {
+      float: left;
+
+      img {
+        width: 730px;
+        height: 284px;
+      }
+    }
   }
 
-  ul li {
-    float: left;
+  .arrow .arr {
+    position: absolute;
+    width: 37px;
+    height: 64px;
+    top: 50%;
+    margin-top: -31px;
+    font-size: 35px;
+    text-align: center;
+    line-height: 64px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .arrow .arrow-left {
+    left: -68px;
+  }
+
+  .arrow .arrow-right {
+    right: -68px;
   }
   // 小圆圈
   .circle {
     position: absolute;
     bottom: 10px;
-    left: 40%;
+    left: 35%;
 
     li {
       float: left;
@@ -196,6 +199,90 @@
   }
 }
 
+// 下载客户端
+.upload {
+  position: absolute;
+  right: 0;
+  width: 254px;
+  height: 285px;
+  background-color: azure;
+}
+// 首页内容
+.main {
+  width: 984px;
+  height: 1323px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-bottom: 0;
+
+  .main-left {
+    width: 729px;
+    height: 100%;
+    padding: 20px 20px 3px;
+    border-right: 1px solid #d3d3d3;
+
+    .recommend {
+      width: 100%;
+      height: 35px;
+      border-bottom: 2px solid #c10d0c;
+      background-position: -225px -156px;
+
+      a {
+        color: #666;
+      }
+
+      .rec-nav a {
+        height: 14px;
+        padding: 0 10px;
+        border-right: 1px solid #ccc;
+      }
+
+      .rec-a {
+        padding: 0 10px 0 34px;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .rec-a,
+      .rec-nav .rec-span-a {
+        border-right: 0;
+      }
+
+      .rec-more {
+        float: right;
+        width: 40px;
+        height: 16px;
+        margin: 9px 10px 0 0;
+        background-position: 28px -236px;
+      }
+    }
+
+    .record {
+      width: 689px;
+      height: 310px;
+      margin-top: 20px;
+      margin-bottom: 90px;
+      border: 1px solid #000;
+    }
+
+    .new-record,
+    .list {
+      width: 689px;
+      margin: 20px 0 37px;
+      background-color: #f5f5f5;
+      border: 1px solid #d3d3d3;
+    }
+
+    .new-record {
+      height: 186px;
+    }
+
+    .list {
+      height: 472px;
+    }
+  }
+}
 // 尾部
 footer {
   justify-content: center;

@@ -12,6 +12,7 @@
     <script type="module" src="js/style.js"></script>
     <script src="js/login.js"></script>
     <script src="js/ajax.js"></script>
+    <script src="js/banner.js"></script>
     <script src="js/animate.js"></script>
     <script src="js/index.js"></script>
   </head>
@@ -38,14 +39,14 @@
             ><em></em><input type="text" value="音乐/视频/电台/用户"
           /></span>
           <a href="#">创作者中心</a>
-          <button><a href="login.html">登录</a></button>
+          <button><a href="javascript:;" id="window">登录</a></button>
         </section>
       </article>
     </header>
     <!-- tab栏部分 -->
     <article class="content">
       <div class="tab1 item block">
-        <div class="header-bottom first-nav">
+        <section class="header-bottom first-nav">
           <div class="bottom-nav">
             <a href="#" class="margin">推荐</a>
             <a href="#">排行榜</a>
@@ -54,34 +55,83 @@
             <a href="#">歌手</a>
             <a href="#">新碟上架</a>
           </div>
-        </div>
-        <div class="carousel">
-          <!-- 左侧按钮 -->
-          <a href="javascript:;" class="btn-left">&lt;</a>
-          <!-- 轮播图部分 -->
+        </section>
+        <section class="carousel">
           <div class="carousel-main">
-            <!-- 核心的滚动区域 -->
-            <ul>
-              <li><a href="#"></a><img src="img/carousel1.jpg" alt="" /></li>
-              <li><a href="#"></a><img src="img/carousel2.jpg" alt="" /></li>
-              <li><a href="#"></a><img src="img/carousel3.jpg" alt="" /></li>
-              <li><a href="#"></a><img src="img/carousel4.jpg" alt="" /></li>
-            </ul>
-            <!-- 小圆圈 -->
-            <ol class="circle"></ol>
+            <!-- 轮播图 -->
+            <div class="slider">
+              <ul class="list"></ul>
+              <!-- 小圆圈 -->
+              <ol class="circle"></ol>
+              <!-- <p class="circle"></p> -->
+            </div>
+            <!-- 箭头 -->
+            <div class="arrow">
+              <span class="arr arrow-left">&lt;</span>
+              <span class="arr arrow-right">&gt;</span>
+            </div>
+            <!-- 下载客户端 -->
+            <div class="upload"></div>
           </div>
-          <!-- 右侧按钮 -->
-          <a href="javascript:;" class="btn-right">&gt;</a>
-          <!-- 下载客户端 -->
-          <div class="upload"></div>
-        </div>
+        </section>
+        <!-- 首页内容 -->
+        <section class="main">
+          <div class="main-left">
+            <div class="recommend">
+              <a href="" class="rec-a">热门推荐</a>
+              <span class="rec-nav">
+                <a href="">华语</a>
+                <a href="">流行</a>
+                <a href="">摇滚</a>
+                <a href="">民谣</a>
+                <a href="" class="rec-span-a">电子</a>
+              </span>
+              <span class="rec-more"><a href="">更多</a></span>
+            </div>
+            <div class="record">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="recommend">
+              <a href="" class="rec-a">热门推荐</a>
+              <span class="rec-nav">
+                <a href="">华语</a>
+                <a href="">流行</a>
+                <a href="">摇滚</a>
+                <a href="">民谣</a>
+                <a href="" class="rec-span-a">电子</a>
+              </span>
+              <span class="rec-more"><a href="">更多</a></span>
+            </div>
+            <div class="new-record"></div>
+            <div class="recommend">
+              <a href="" class="rec-a">热门推荐</a>
+              <span class="rec-nav">
+                <a href="">华语</a>
+                <a href="">流行</a>
+                <a href="">摇滚</a>
+                <a href="">民谣</a>
+                <a href="" class="rec-span-a">电子</a>
+              </span>
+              <span class="rec-more"><a href="">更多</a></span>
+            </div>
+            <div class="list"></div>
+          </div>
+
+          <div class="main-right"></div>
+        </section>
       </div>
       <div class="tab2 item">
         <div class="second-content"></div>
       </div>
     </article>
-    <button id="window">点击</button>
-    <!-- 登录 -->
+    <!-- 登录窗口 -->
     <article class="login-phone">
       <section class="login-bar font-14">
         登录<span class="window-close">X</span>
@@ -100,6 +150,7 @@
         <a href="">&lt;其他登录方式</a> <a href="没有账号？免费注册&gt;"></a>
       </section>
     </article>
+
     <!-- footer部分 -->
     <footer class="flex">
       <section class="footer-left">

@@ -79,7 +79,7 @@
   border-bottom: 1px solid #a40011;
 }
 .header-bottom .bottom-nav {
-  margin-left: 602px;
+  margin-left: 585px;
 }
 .header-bottom a {
   display: flex;
@@ -96,61 +96,63 @@
   background-color: #c20c0c;
 }
 .carousel {
-  position: relative;
   width: 100%;
   height: 284px;
   background-image: url(../img/carousel_bg1.jpg);
   background-size: 6000px;
   background-position: center center;
 }
-.btn-left,
-.btn-right {
-  display: none;
-  position: absolute;
-  top: 50%;
-  margin-top: -31px;
-  width: 37px;
-  height: 64px;
-  color: #fff;
-  font-size: 40px;
-  text-align: center;
-  line-height: 64px;
-  z-index: 2;
-}
-.btn-left:hover,
-.btn-right:hover {
-  background: rgba(0, 0, 0, 0.2);
-}
-.btn-left {
-  left: -68px;
-}
-.btn-right {
-  right: -68px;
-}
 .carousel-main {
+  position: relative;
+  width: 982px;
+  height: 285px;
+  margin: 0 auto;
+}
+.carousel-main .slider {
   position: absolute;
-  left: 25%;
   width: 730px;
   height: 284px;
-  background-color: #000;
   overflow: hidden;
 }
-.carousel-main img {
-  width: 730px;
-}
-.carousel-main ul {
+.carousel-main .slider ul {
   position: absolute;
   top: 0;
   left: 0;
   width: 500%;
 }
-.carousel-main ul li {
+.carousel-main .slider ul li {
   float: left;
+}
+.carousel-main .slider ul li img {
+  width: 730px;
+  height: 284px;
+}
+.carousel-main .arrow .arr {
+  position: absolute;
+  width: 37px;
+  height: 64px;
+  top: 50%;
+  margin-top: -31px;
+  font-size: 35px;
+  text-align: center;
+  line-height: 64px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+.carousel-main .arrow .arr:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.carousel-main .arrow .arrow-left {
+  left: -68px;
+}
+.carousel-main .arrow .arrow-right {
+  right: -68px;
 }
 .carousel-main .circle {
   position: absolute;
   bottom: 10px;
-  left: 40%;
+  left: 35%;
 }
 .carousel-main .circle li {
   float: left;
@@ -163,6 +165,77 @@
 }
 .carousel-main .circle .current {
   background-color: #ba0c0c;
+}
+.upload {
+  position: absolute;
+  right: 0;
+  width: 254px;
+  height: 285px;
+  background-color: azure;
+}
+.main {
+  width: 984px;
+  height: 1323px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #d3d3d3;
+  border-bottom: 0;
+}
+.main .main-left {
+  width: 729px;
+  height: 100%;
+  padding: 20px 20px 3px;
+  border-right: 1px solid #d3d3d3;
+}
+.main .main-left .recommend {
+  width: 100%;
+  height: 35px;
+  border-bottom: 2px solid #c10d0c;
+  background-position: -225px -156px;
+}
+.main .main-left .recommend a {
+  color: #666;
+}
+.main .main-left .recommend .rec-nav a {
+  height: 14px;
+  padding: 0 10px;
+  border-right: 1px solid #ccc;
+}
+.main .main-left .recommend .rec-a {
+  padding: 0 10px 0 34px;
+  font-size: 20px;
+  color: #333;
+}
+.main .main-left .recommend .rec-a,
+.main .main-left .recommend .rec-nav .rec-span-a {
+  border-right: 0;
+}
+.main .main-left .recommend .rec-more {
+  float: right;
+  width: 40px;
+  height: 16px;
+  margin: 9px 10px 0 0;
+  background-position: 28px -236px;
+}
+.main .main-left .record {
+  width: 689px;
+  height: 310px;
+  margin-top: 20px;
+  margin-bottom: 90px;
+  border: 1px solid #000;
+}
+.main .main-left .new-record,
+.main .main-left .list {
+  width: 689px;
+  margin: 20px 0 37px;
+  background-color: #f5f5f5;
+  border: 1px solid #d3d3d3;
+}
+.main .main-left .new-record {
+  height: 186px;
+}
+.main .main-left .list {
+  height: 472px;
 }
 footer {
   justify-content: center;
