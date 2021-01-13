@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>网易云音乐</title>
-    <link rel="stylesheet" href="css/index.css" />
-    <link rel="stylesheet" href="css/variable.css" />
     <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/variable.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/login.css" />
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
     <script type="module" src="js/style.js"></script>
@@ -56,27 +56,30 @@
             <a href="#">新碟上架</a>
           </div>
         </section>
-        <section class="carousel">
-          <div class="carousel-main">
-            <!-- 轮播图 -->
-            <div class="slider">
-              <ul class="list"></ul>
-              <!-- 小圆圈 -->
-              <ol class="circle"></ol>
-              <!-- <p class="circle"></p> -->
-            </div>
-            <!-- 箭头 -->
-            <div class="arrow">
-              <span class="arr arrow-left">&lt;</span>
-              <span class="arr arrow-right">&gt;</span>
-            </div>
-            <!-- 下载客户端 -->
-            <div class="upload"></div>
+        <div class="filter"><div class="carousel"></div></div>
+
+        <div class="carousel-main">
+          <!-- 轮播图 -->
+          <div class="slider">
+            <ul class="list"></ul>
+            <!-- 小圆圈 -->
+            <ol class="circle"></ol>
+            <!-- <p class="circle"></p> -->
           </div>
-        </section>
+          <!-- 箭头 -->
+          <div class="arrow">
+            <span class="arr arrow-left">&lt;</span>
+            <span class="arr arrow-right">&gt;</span>
+          </div>
+          <!-- 下载客户端 -->
+          <div class="upload">
+            <a href=""></a>
+            <p>PC 安卓 iPhone WP iPad Mac 六大客户端</p>
+          </div>
+        </div>
         <!-- 首页内容 -->
         <section class="main">
-          <div class="main-left">
+          <section class="main-left">
             <div class="recommend">
               <a href="" class="rec-a">热门推荐</a>
               <span class="rec-nav">
@@ -89,42 +92,40 @@
               <span class="rec-more"><a href="">更多</a></span>
             </div>
             <div class="record">
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
-              <span></span>
+              <div class="record-img"></div>
             </div>
+
             <div class="recommend">
-              <a href="" class="rec-a">热门推荐</a>
-              <span class="rec-nav">
-                <a href="">华语</a>
-                <a href="">流行</a>
-                <a href="">摇滚</a>
-                <a href="">民谣</a>
-                <a href="" class="rec-span-a">电子</a>
-              </span>
+              <a href="" class="rec-a">新碟上架</a>
               <span class="rec-more"><a href="">更多</a></span>
             </div>
             <div class="new-record"></div>
+
             <div class="recommend">
-              <a href="" class="rec-a">热门推荐</a>
-              <span class="rec-nav">
-                <a href="">华语</a>
-                <a href="">流行</a>
-                <a href="">摇滚</a>
-                <a href="">民谣</a>
-                <a href="" class="rec-span-a">电子</a>
-              </span>
+              <a href="" class="rec-a">榜单</a>
               <span class="rec-more"><a href="">更多</a></span>
             </div>
             <div class="list"></div>
-          </div>
+          </section>
 
-          <div class="main-right"></div>
+          <section class="main-right">
+            <div class="uer-login">
+              <p>登录网易云音乐，可以享受无限收藏的乐趣，并且无限同步到手机</p>
+              <a href="" class="user-login-btn block">用户登录</a>
+            </div>
+            <div class="singer">
+              <a href="" class="singer-left">入驻歌手</a>
+              <a href="" class="singer-right">查看全部&gt;</a>
+            </div>
+            <div class="singer-content">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <button></button>
+            </div>
+          </section>
         </section>
       </div>
       <div class="tab2 item">

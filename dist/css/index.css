@@ -95,18 +95,23 @@
   height: 5px;
   background-color: #c20c0c;
 }
+.filter {
+  overflow: hidden;
+}
 .carousel {
+  position: relative;
   width: 100%;
   height: 284px;
-  background-image: url(../img/carousel_bg1.jpg);
   background-size: 6000px;
+  filter: blur(80px);
   background-position: center center;
 }
 .carousel-main {
-  position: relative;
+  position: absolute;
+  top: 105px;
+  left: 461px;
   width: 982px;
   height: 285px;
-  margin: 0 auto;
 }
 .carousel-main .slider {
   position: absolute;
@@ -169,20 +174,36 @@
 .upload {
   position: absolute;
   right: 0;
-  width: 254px;
-  height: 285px;
-  background-color: azure;
+  width: 252px;
+  height: 284px;
+  background: url(../img/download.png) no-repeat;
+}
+.upload a {
+  display: block;
+  width: 215px;
+  height: 56px;
+  margin: 186px 0 0 19px;
+}
+.upload p {
+  margin: 10px auto;
+  color: #8d8d8d;
+  text-align: center;
 }
 .main {
-  width: 984px;
-  height: 1323px;
+  width: 983px;
+  height: 1425px;
   margin: 0 auto;
   background-color: #fff;
-  border: 1px solid #d3d3d3;
   border-bottom: 0;
+  border: 1px solid #ccc;
+}
+.main a,
+.main p {
+  color: #666;
 }
 .main .main-left {
-  width: 729px;
+  float: left;
+  width: 731px;
   height: 100%;
   padding: 20px 20px 3px;
   border-right: 1px solid #d3d3d3;
@@ -192,9 +213,6 @@
   height: 35px;
   border-bottom: 2px solid #c10d0c;
   background-position: -225px -156px;
-}
-.main .main-left .recommend a {
-  color: #666;
 }
 .main .main-left .recommend .rec-nav a {
   height: 14px;
@@ -218,11 +236,74 @@
   background-position: 28px -236px;
 }
 .main .main-left .record {
-  width: 689px;
-  height: 310px;
+  height: 420px;
   margin-top: 20px;
   margin-bottom: 90px;
-  border: 1px solid #000;
+}
+.main .main-left .record .record-img {
+  display: flex;
+  height: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+}
+.main .main-left .record .record-img span {
+  position: relative;
+  width: 140px;
+}
+.main .main-left .record .record-img span p,
+.main .main-left .record .record-img span a {
+  cursor: pointer;
+}
+.main .main-left .record .record-img span img,
+.main .main-left .record .record-img span a,
+.main .main-left .record .record-img span em {
+  background: url(../img/coverall.png) no-repeat;
+}
+.main .main-left .record .record-img span img {
+  height: 140px;
+  margin-bottom: 5px;
+}
+.main .main-left .record .record-img span p {
+  color: #000;
+  font-size: 14px;
+}
+.main .main-left .record .record-img span p:hover {
+  text-decoration: underline;
+}
+.main .main-left .record .record-img span i,
+.main .main-left .record .record-img span li {
+  background: url(../img/iconall.png) no-repeat;
+}
+.main .main-left .record .record-img span a,
+.main .main-left .record .record-img span em,
+.main .main-left .record .record-img span i,
+.main .main-left .record .record-img span li {
+  position: absolute;
+  width: 100%;
+  background-position: 0 0;
+}
+.main .main-left .record .record-img span li {
+  top: 118px;
+  right: 10px;
+  width: 16px;
+  height: 17px;
+}
+.main .main-left .record .record-img span a {
+  top: 0;
+  height: 140px;
+}
+.main .main-left .record .record-img span em {
+  top: 113px;
+  height: 27px;
+  background-position: 0 -537px;
+}
+.main .main-left .record .record-img span i {
+  top: 121px;
+  left: 10px;
+  width: 14px;
+  height: 11px;
+  background-position: 0 -24px;
 }
 .main .main-left .new-record,
 .main .main-left .list {
@@ -236,6 +317,56 @@
 }
 .main .main-left .list {
   height: 472px;
+}
+.main .main-right {
+  float: left;
+}
+.main .main-right .uer-login {
+  width: 250px;
+  height: 126px;
+  padding: 16px 22px;
+}
+.main .main-right .uer-login p {
+  line-height: 22px;
+}
+.main .main-right .uer-login .user-login-btn {
+  width: 100px;
+  height: 31px;
+  margin: 16px auto;
+  background-position: 0 -195px;
+  color: #fff;
+  text-align: center;
+  line-height: 31px;
+}
+.main .main-right .singer {
+  width: 210px;
+  height: 24px;
+  margin: 17px auto 20px;
+  border-bottom: 1px solid #ccc;
+}
+.main .main-right .singer .singer-left {
+  color: #333;
+  font-weight: 700;
+}
+.main .main-right .singer .singer-right {
+  float: right;
+}
+.main .main-right .singer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  width: 210px;
+  height: 410px;
+  margin: 0 auto;
+}
+.main .main-right .singer-content span,
+.main .main-right .singer-content button {
+  width: 100%;
+  height: 30px;
+}
+.main .main-right .singer-content span {
+  height: 62px;
+  background-color: #fafafa;
 }
 footer {
   justify-content: center;

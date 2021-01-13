@@ -113,20 +113,25 @@
   background-color: #c20c0c;
 }
 // 轮播图
+.filter {
+  overflow: hidden;
+}
 
 .carousel {
+  position: relative;
   width: 100%;
   height: 284px;
-  background-image: url(../img/carousel_bg1.jpg);
   background-size: 6000px;
+  filter: blur(80px);
   background-position: center center;
 }
 
 .carousel-main {
-  position: relative;
+  position: absolute;
+  top: 105px;
+  left: 461px;
   width: 982px;
   height: 285px;
-  margin: 0 auto;
 
   .slider {
     position: absolute;
@@ -203,21 +208,36 @@
 .upload {
   position: absolute;
   right: 0;
-  width: 254px;
-  height: 285px;
-  background-color: azure;
+  width: 252px;
+  height: 284px;
+  background: url(../img/download.png) no-repeat;
+
+  a {
+    display: block;
+    width: 215px;
+    height: 56px;
+    margin: 186px 0 0 19px;
+  }
+
+  p {
+    margin: 10px auto;
+    color: #8d8d8d;
+    text-align: center;
+  }
 }
+
 // 首页内容
 .main {
-  width: 984px;
-  height: 1323px;
+  width: 983px;
+  height: 1425px;
   margin: 0 auto;
   background-color: #fff;
-  border: 1px solid #d3d3d3;
   border-bottom: 0;
+  border: 1px solid #ccc;
 
   .main-left {
-    width: 729px;
+    float: left;
+    width: 731px;
     height: 100%;
     padding: 20px 20px 3px;
     border-right: 1px solid #d3d3d3;
@@ -227,10 +247,6 @@
       height: 35px;
       border-bottom: 2px solid #c10d0c;
       background-position: -225px -156px;
-
-      a {
-        color: #666;
-      }
 
       .rec-nav a {
         height: 14px;
@@ -259,11 +275,86 @@
     }
 
     .record {
-      width: 689px;
-      height: 310px;
+      height: 420px;
       margin-top: 20px;
       margin-bottom: 90px;
-      border: 1px solid #000;
+
+      .record-img {
+        .flex-wrap();
+
+        height: 100%;
+        justify-content: space-between;
+
+        span {
+          position: relative;
+          width: 140px;
+
+          p,
+          a {
+            cursor: pointer;
+          }
+
+          img,
+          a,
+          em {
+            background: url(../img/coverall.png) no-repeat;
+          }
+
+          img {
+            height: 140px;
+            margin-bottom: 5px;
+          }
+
+          p {
+            color: #000;
+            font-size: 14px;
+
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+
+          i,
+          li {
+            background: url(../img/iconall.png) no-repeat;
+          }
+
+          a,
+          em,
+          i,
+          li {
+            position: absolute;
+            width: 100%;
+            background-position: 0 0;
+          }
+
+          li {
+            top: 118px;
+            right: 10px;
+            width: 16px;
+            height: 17px;
+          }
+
+          a {
+            top: 0;
+            height: 140px;
+          }
+
+          em {
+            top: 113px;
+            height: 27px;
+            background-position: 0 -537px;
+          }
+
+          i {
+            top: 121px;
+            left: 10px;
+            width: 14px;
+            height: 11px;
+            background-position: 0 -24px;
+          }
+        }
+      }
     }
 
     .new-record,
@@ -280,6 +371,65 @@
 
     .list {
       height: 472px;
+    }
+  }
+
+  .main-right {
+    float: left;
+
+    .uer-login {
+      width: 250px;
+      height: 126px;
+      padding: 16px 22px;
+
+      p {
+        line-height: 22px;
+      }
+
+      .user-login-btn {
+        width: 100px;
+        height: 31px;
+        margin: 16px auto;
+        background-position: 0 -195px;
+        color: #fff;
+        text-align: center;
+        line-height: 31px;
+      }
+    }
+
+    .singer {
+      width: 210px;
+      height: 24px;
+      margin: 17px auto 20px;
+      border-bottom: 1px solid #ccc;
+
+      .singer-left {
+        color: #333;
+        font-weight: 700;
+      }
+
+      .singer-right {
+        float: right;
+      }
+    }
+
+    .singer-content {
+      .flex-wrap();
+
+      width: 210px;
+      height: 410px;
+      margin: 0 auto;
+
+      span,
+      button {
+        width: 100%;
+        height: 30px;
+      }
+
+      span {
+        height: 62px;
+        background-color: #fafafa;
+      }
     }
   }
 }
@@ -311,7 +461,7 @@ footer {
     justify-content: space-around;
     width: 520px;
     height: 115px;
-    color: #666;
+    // color: #666;
   }
 
   img {
@@ -323,7 +473,6 @@ footer {
     display: inline-block;
     width: 50px;
     height: 70px;
-    // background: url(../img/footer.png) no-repeat;
     background-size: 110px 552px;
   }
 

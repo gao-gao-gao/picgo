@@ -38,3 +38,13 @@ em,
 .recommend {
   background: url(../img/index.png) no-repeat;
 }
+.uer-login,
+.user-login-btn {
+  background: url(../img/index.png) no-repeat;
+  background-position: 0 0;
+}
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
