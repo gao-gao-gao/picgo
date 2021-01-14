@@ -1,15 +1,11 @@
 /* eslint-disable no-undef */
 window.addEventListener("load", function () {
+  // 轮播图
   ajax({
     type: "GET",
     url: "http://localhost:3000/banner",
     success: function (res) {
-      console.log(res);
-      let urll = res.banners[1].imageUrl;
-      console.log(urll);
-      // $("#img").attr("src", urll);
       let length = res.banners.length;
-      console.log(length);
       $(".carousel").css(
         "background-image",
         "url(" + res.banners[0].imageUrl + ")"
@@ -81,12 +77,8 @@ window.addEventListener("load", function () {
     url: "http://localhost:3000/personalized",
     params: {
       limit: "8",
-      param: "140y140",
     },
     success: function (res) {
-      let recommend = res.result[0].picUrl;
-      console.log(recommend);
-      console.log(res.result.length);
       let length = res.result.length;
       let add = "<a></a>" + "<em></em>" + "<i></i>" + "<li></li>";
       for (let i = 0; i < length; i++) {
@@ -100,6 +92,92 @@ window.addEventListener("load", function () {
           "</p>" +
           add;
         $(".record .record-img").append(span);
+      }
+    },
+  });
+
+  // 入驻歌手
+  let singer = function (id) {
+    ajax({
+      type: "POST",
+      url: "http://localhost:3000/user/detail",
+      params: {
+        uid: id,
+      },
+      success: function (res) {
+        addSinger(res);
+      },
+    });
+  };
+  function addSinger(res) {
+    let a = document.createElement("a");
+    let div = document.createElement("div");
+    $(".singer-content").append(a);
+    a.innerHTML = "<img src='" + res.profile.avatarUrl + "'>";
+    a.append(div);
+    div.innerHTML =
+      "<span>" +
+      res.profile.nickname +
+      "</span>" +
+      "<p>" +
+      res.profile.description +
+      "</p>";
+  }
+  singer(29879272);
+  singer(100167517);
+  singer(58426904);
+  singer(93504818);
+  singer(46998208);
+
+  // 热门主播
+  let anchor = function (id) {
+    ajax({
+      type: "POST",
+      url: "http://localhost:3000/user/detail",
+      params: {
+        uid: id,
+      },
+      success: function (res) {
+        addAnchor(res);
+      },
+    });
+  };
+  function addAnchor(res) {
+    let a = document.createElement("a");
+    let div = document.createElement("div");
+    $(".singer-anchor").append(a);
+    a.innerHTML = "<img src='" + res.profile.avatarUrl + "'>";
+    a.append(div);
+    div.innerHTML =
+      "<span>" +
+      res.profile.nickname +
+      "</span>" +
+      "<p>" +
+      res.profile.description +
+      "</p>";
+  }
+  anchor(278438485);
+  anchor(91239965);
+  anchor(324314596);
+  anchor(1611157);
+  anchor(2313954);
+
+  // 新碟上架
+  ajax({
+    type: "POST",
+    url: "http://localhost:3000/album",
+    params: {
+      id: 121480001,
+    },
+    success: function (res) {
+      console.log(res);
+      $(".new-record arrow-right").click(function () {
+        MoveLeft("new-record-roll", 4, "ul", ".img_hidden_" + abbr);
+      });
+      function MoveLeft(displayRegion, displayNum, elementName, HiddenRegion) {
+        if ($(displayRegion + " " + elementName).length >= displayNum + 1) {
+          return;
+        }
       }
     },
   });

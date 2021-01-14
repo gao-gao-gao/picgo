@@ -34,3 +34,8 @@ img {
 input {
   border: none;
 }
+a,
+p,
+.footer-left {
+  color: #666;
+}

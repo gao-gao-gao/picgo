@@ -1,3 +1,4 @@
+@import "variable.less";
 // 头部
 .header-top {
   justify-content: center;
@@ -365,8 +366,66 @@
       border: 1px solid #d3d3d3;
     }
 
+    // 新碟上架
     .new-record {
-      height: 186px;
+      height: 190px;
+
+      .new-record-roll {
+        position: relative;
+        width: 645px;
+        height: 180px;
+        margin: 0 auto;
+        padding-top: 28px;
+        background-color: pink;
+
+        ul {
+          position: absolute;
+          width: 645px;
+          height: 150px;
+        }
+
+        .u2,
+        .u3 {
+          left: 645px;
+        }
+
+        .u1 {
+          left: 0;
+          background-color: plum;
+        }
+
+        .u1-hidden {
+          display: none;
+        }
+
+        .u2 {
+          background-color: rebeccapurple;
+        }
+
+        .u3 {
+          background-color: plum;
+        }
+
+        .u4 {
+          left: -645px;
+          background-color: rebeccapurple;
+        }
+
+        .arrow-left,
+        .arrow-right {
+          position: absolute;
+          top: 40%;
+          cursor: pointer;
+        }
+
+        .arrow-left {
+          left: 5px;
+        }
+
+        .arrow-right {
+          right: 5px;
+        }
+      }
     }
 
     .list {
@@ -413,22 +472,68 @@
       }
     }
 
+    .singer-anchor,
     .singer-content {
       .flex-wrap();
 
       width: 210px;
-      height: 410px;
-      margin: 0 auto;
+      height: 250px;
+      margin: 0 auto 30px;
 
-      span,
-      button {
-        width: 100%;
-        height: 30px;
+      a {
+        height: 50px;
+
+        img {
+          float: left;
+          width: 40px;
+          height: 40px;
+        }
+
+        div {
+          float: left;
+          width: 162px;
+          padding-left: 14px;
+
+          span {
+            color: #000;
+          }
+
+          p {
+            .font-hide();
+
+            margin-bottom: 5px;
+          }
+        }
       }
+    }
 
-      span {
+    .singer-content {
+      height: 410px;
+
+      a {
+        width: 100%;
         height: 62px;
         background-color: #fafafa;
+
+        img {
+          width: 62px;
+          height: 62px;
+        }
+
+        div {
+          width: 146px;
+          padding-top: 8px;
+
+          span {
+            font-weight: 700;
+            font-size: 14px;
+            color: #333;
+          }
+
+          p {
+            margin-bottom: 10px;
+          }
+        }
       }
     }
   }
