@@ -163,22 +163,4 @@ window.addEventListener("load", function () {
   anchor(2313954);
 
   // 新碟上架
-  ajax({
-    type: "POST",
-    url: "http://localhost:3000/album",
-    params: {
-      id: 121480001,
-    },
-    success: function (res) {
-      console.log(res);
-      $(".new-record arrow-right").click(function () {
-        MoveLeft("new-record-roll", 4, "ul", ".img_hidden_" + abbr);
-      });
-      function MoveLeft(displayRegion, displayNum, elementName, HiddenRegion) {
-        if ($(displayRegion + " " + elementName).length >= displayNum + 1) {
-          return;
-        }
-      }
-    },
-  });
 });
