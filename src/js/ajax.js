@@ -17,18 +17,23 @@ function ajax(options = {}) {
   // 创建ajax对象
   let xhr = new XMLHttpRequest();
 
-  const search = Object.keys(requestOptions.params).reduce(
-    (memo, key, index) => {
-      memo += `${key}=${requestOptions.params[key]}`;
-      if (index !== Object.keys(requestOptions.params).length - 1) {
-        memo += "&";
-      }
-      return memo;
-    },
-    ""
-  );
+  const search = Object.entries(requestOptions.params)
+    .map(([key, value]) => `${key}=${value}`)
+    .join("&");
 
   requestOptions.url += `?${search}`;
+
+  // 法二：
+  // const search = Object.keys(requestOptions.params).reduce(
+  //   (memo, key, index) => {
+  //     memo += `${key}=${requestOptions.params[key]}`;
+  //     if (index !== Object.keys(requestOptions.params).length - 1) {
+  //       memo += "&";
+  //     }
+  //     return memo;
+  //   },
+  //   ""
+  // );
 
   xhr.withCredentials = true;
 

@@ -1,24 +1,5 @@
 /* eslint-disable no-undef */
 $(document).ready(function () {
-  // nav-tab栏
-  $("nav a").click(function () {
-    $("nav a").removeClass("current").removeClass("nav-current");
-    $(this).addClass("current");
-    $(".content div,nav sub").removeClass("block");
-    $("." + $(this).attr("title")).addClass("block");
-  });
-
-  $("nav a").hover(
-    function () {
-      if (!$(this).hasClass("nav-current")) {
-        $(this).addClass("nav-current");
-      }
-    },
-    function () {
-      $(this).removeClass("nav-current");
-    }
-  );
-
   // 登录窗口
   let login = $(".login-phone");
   login.hide();

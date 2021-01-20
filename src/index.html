@@ -9,11 +9,8 @@
     <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/login.css" />
     <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-    <script type="module" src="js/style.js"></script>
-    <script src="js/login.js"></script>
     <script src="js/ajax.js"></script>
-    <script src="js/banner.js"></script>
-    <script src="js/animate.js"></script>
+    <script src="js/login.js"></script>
     <script src="js/index.js"></script>
   </head>
 
@@ -38,7 +35,7 @@
           <span class="flex"
             ><em></em><input type="text" value="音乐/视频/电台/用户"
           /></span>
-          <a href="#">创作者中心</a>
+          <a href="#" class="creator">创作者中心</a>
           <button><a href="javascript:;" id="window">登录</a></button>
         </section>
       </article>
@@ -99,24 +96,24 @@
               <a href="" class="rec-a">新碟上架</a>
               <span class="rec-more"><a href="">更多</a></span>
             </div>
-            <div class="new-record">
-              <div class="new-record-roll">
-                <ul class="u1"></ul>
-                <ul class="u2"></ul>
-                <ul class="u3"></ul>
-                <ul class="u4"></ul>
-                <div class="arrow">
-                  <span class="arr arrow-left">&lt;</span>
-                  <span class="arr arrow-right">&gt;</span>
-                </div>
-              </div>
-            </div>
+            <div class="new-record"></div>
 
             <div class="recommend">
               <a href="" class="rec-a">榜单</a>
               <span class="rec-more"><a href="">更多</a></span>
             </div>
-            <div class="list"></div>
+            <div class="list">
+              <dl>
+                <dt>
+                  <div class="list-img"></div>
+                  <a href="" class="list-font"><h3>飙升榜</h3></a><span></span>
+                </dt>
+                <dd>
+                  <ol class="list-sing"></ol>
+                  <div><a href=""></a></div>
+                </dd>
+              </dl>
+            </div>
           </section>
 
           <section class="main-right">

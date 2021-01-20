@@ -1,6 +1,7 @@
 .login {
   position: absolute;
-  left: 50px;
+  top: 110px;
+  left: 34%;
   width: 530px;
   border-radius: 4px;
   background-color: #fff;
@@ -22,7 +23,8 @@
 }
 .login-phone {
   position: absolute;
-  left: 50px;
+  top: 110px;
+  left: 34%;
   width: 530px;
   border-radius: 4px;
   background-color: #fff;

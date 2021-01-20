@@ -1,5 +1,24 @@
 /* eslint-disable no-undef */
 window.addEventListener("load", function () {
+  // nav-tab栏
+  $("nav a").click(function () {
+    $("nav a").removeClass("current").removeClass("nav-current");
+    $(this).addClass("current");
+    $(".content div,nav sub").removeClass("block");
+    $("." + $(this).attr("title")).addClass("block");
+  });
+
+  $("nav a").hover(
+    function () {
+      if (!$(this).hasClass("nav-current")) {
+        $(this).addClass("nav-current");
+      }
+    },
+    function () {
+      $(this).removeClass("nav-current");
+    }
+  );
+
   // 轮播图
   ajax({
     type: "GET",
@@ -142,6 +161,7 @@ window.addEventListener("load", function () {
       },
     });
   };
+
   function addAnchor(res) {
     let a = document.createElement("a");
     let div = document.createElement("div");
@@ -163,22 +183,32 @@ window.addEventListener("load", function () {
   anchor(2313954);
 
   // 新碟上架
+  // ajax({
+  //   type: "POST",
+  //   url: "http://localhost:3000/album",
+  //   params: {
+  //     id: 121480001,
+  //   },
+  //   success: function () {},
+  // });
+
+  // 榜单
+
   ajax({
     type: "POST",
-    url: "http://localhost:3000/album",
-    params: {
-      id: 121480001,
-    },
+    url: "http://localhost:3000/toplist/detail",
     success: function (res) {
-      console.log(res);
-      $(".new-record arrow-right").click(function () {
-        MoveLeft("new-record-roll", 4, "ul", ".img_hidden_" + abbr);
-      });
-      function MoveLeft(displayRegion, displayNum, elementName, HiddenRegion) {
-        if ($(displayRegion + " " + elementName).length >= displayNum + 1) {
-          return;
-        }
+      let img = document.createElement("img");
+      let a = document.createElement("a");
+      // console.log(res.list[0].tracks[0].first);
+      $(".list-img").append(img, a);
+      $(img).attr("src", res.list[0].coverImgUrl);
+      $(".list-font h3").text(res.list[0].name);
+      for (let i = 0; i < 3; i++) {
+        let li = document.createElement("li");
+        $(".list-sing").append(li);
       }
+      $("dl").clone().appendTo(".list");
     },
   });
 });
