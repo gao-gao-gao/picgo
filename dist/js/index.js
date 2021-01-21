@@ -182,6 +182,7 @@ window.addEventListener("load", function () {
   anchor(2313954);
 
   // 新碟上架
+<<<<<<< HEAD
   ajax({
     type: "POST",
     url: "http://localhost:3000/album",
@@ -250,4 +251,6 @@ window.addEventListener("load", function () {
       $("dl").clone().appendTo(".list");
     },
   });
+=======
+>>>>>>> 1026465edbbd94f345a0337de9688eba8b96f4ea
 });
