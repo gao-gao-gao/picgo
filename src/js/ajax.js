@@ -67,6 +67,23 @@ function ajax(options = {}) {
       responseText = JSON.parse(responseText);
     }
     console.log(typeof xhr.status);
+
+    // function phoneticLookup(val) {
+    //   val = "s" + val.toString();
+    //   console.log("进来的状态码：" + val);
+    //   let lookup = {
+    //     s200: "requestOptions.success(responseText, xhr)",
+    //     s401: "requestOptions.error(alert('访问被拒绝'))",
+    //     s403: "requestOptions.error(alert('资源不可用'))",
+    //     s404: "requestOptions.error(alert('找不到页面'))",
+    //     s405: "requestOptions.error(alert('不允许此方法'))",
+    //     s500: "requestOptions.error(alert('服务内部错误'))",
+    //     "": requestOptions.error(alert("未知错误")),
+    //   };
+    //   eval(lookup[val]);
+    // }
+    // console.log("状态码：" + xhr.status);
+    // phoneticLookup(xhr.status);
     switch (xhr.status) {
       case 200:
         requestOptions.success(responseText, xhr);

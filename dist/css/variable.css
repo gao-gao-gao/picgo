@@ -35,7 +35,9 @@ em,
 .user-login-btn,
 .list span,
 .rec-more,
-.recommend {
+.recommend,
+.new-record .arrow-left,
+.new-record .arrow-right {
   background: url(../img/index.png) no-repeat;
   background-position: 0 0;
 }

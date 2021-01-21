@@ -58,7 +58,6 @@ window.addEventListener("load", function () {
       });
       circle.click(function () {
         var index = $(this).prevAll().length;
-        // console.log(index);
         common(index);
         $(this).addClass("current").siblings().removeClass("current");
       });
@@ -98,10 +97,10 @@ window.addEventListener("load", function () {
       limit: "8",
     },
     success: function (res) {
-      let length = res.result.length;
-      let add = "<a></a>" + "<em></em>" + "<i></i>" + "<li></li>";
+      const length = res.result.length;
+      const add = "<a></a>" + "<em></em>" + "<i></i>" + "<li></li>";
       for (let i = 0; i < length; i++) {
-        let span = document.createElement("span");
+        const span = document.createElement("span");
         span.innerHTML =
           "<img src='" +
           res.result[i].picUrl +
@@ -183,14 +182,54 @@ window.addEventListener("load", function () {
   anchor(2313954);
 
   // 新碟上架
-  // ajax({
-  //   type: "POST",
-  //   url: "http://localhost:3000/album",
-  //   params: {
-  //     id: 121480001,
-  //   },
-  //   success: function () {},
-  // });
+  ajax({
+    type: "POST",
+    url: "http://localhost:3000/album",
+    params: {
+      id: 120605500,
+    },
+    success: function (res) {
+      console.log(res);
+      // 滑动效果
+      let record = $(".new-record-roll .roll ul");
+      $(".roll").width($(".new-record-roll .roll ul").width() * record.length);
+      let num = 0;
+      let state = true;
+
+      function play() {
+        //从左向右时，判断num，是为负数
+        if (num < 0) {
+          num = record.length - 1;
+          $(".roll").css({ left: -record.length * 645 + "px" });
+        }
+        //从右向左时，判断num，是否大于最大值
+        if (num > record.length - 1) {
+          num = 0;
+          $(".roll").css({ left: "0" });
+        }
+        let left = num * 645;
+        $(".roll").animate({ left: -left + "px" }, function () {
+          state = true;
+        });
+      }
+
+      //给左右按钮添加点击事件
+      $(".new-record .arrow-right").click(function () {
+        if (state == true) {
+          state = false;
+          num--;
+          play();
+        }
+      });
+      $(".new-record .arrow-left").click(function () {
+        if (state == true) {
+          state = false;
+          num++;
+          play();
+        }
+      });
+    },
+  });
 
   // 榜单
 
