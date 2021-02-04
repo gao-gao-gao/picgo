@@ -1,0 +1,443 @@
+@import "./variable.less";
+
+.myPage {
+  padding: 40px;
+
+  img {
+    border: none;
+  }
+
+  .recommend {
+    position: relative;
+    background: none;
+    color: #666;
+
+    h3,
+    h4 {
+      float: left;
+    }
+
+    h3 {
+      font-size: 20px;
+    }
+
+    h4 {
+      margin-top: 5px;
+      margin-left: 10px;
+      line-height: 26px;
+    }
+
+    .recommend-icon {
+      display: inline-block;
+      margin: 8px 0 0 10px;
+    }
+
+    span {
+      width: 18px;
+      height: 18px;
+    }
+
+    .creatList-icon {
+      display: inline-block;
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      top: 1px;
+      background: url(../img/black-r-icon@3x.png) no-repeat;
+      background-size: cover;
+    }
+
+    div {
+      float: right;
+      margin-top: 5px;
+    }
+
+    .recent-week {
+      width: 48px;
+      height: 26px;
+      padding-right: 8px;
+      margin-right: 8px;
+      border-right: 1px solid #999;
+    }
+
+    .all-time {
+      color: #333;
+      font-weight: 700;
+    }
+  }
+}
+
+.myPage-top {
+  width: 100%;
+  height: 5px;
+  background-color: #c20c0c;
+}
+
+.myPage-head {
+  width: 900px;
+  height: 188px;
+  margin-bottom: 43px;
+  color: #666;
+
+  dt {
+    float: left;
+    margin-right: 40px;
+
+    img {
+      width: 188px;
+      padding: 3px;
+      background: #fff;
+      border: 1px solid #d5d5d5;
+    }
+  }
+
+  dd {
+    float: left;
+    width: 670px;
+
+    .myPage-icon {
+      height: 52px;
+      padding-bottom: 12px;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #ddd;
+
+      h2 {
+        padding-bottom: 3px;
+      }
+
+      .myPage-userName {
+        float: left;
+        margin-top: 3px;
+        color: #000;
+        font-size: 22px;
+        font-weight: normal;
+        line-height: 30px;
+      }
+
+      .user-logo {
+        float: left;
+        width: 20px;
+        height: 36px;
+        margin-left: 10px;
+      }
+
+      p {
+        float: left;
+        margin: 8px 0 0 10px;
+      }
+
+      a {
+        display: inline-block;
+        height: 19px;
+        overflow: hidden;
+        padding-left: 29px;
+        line-height: 21px;
+        color: #e03a24;
+        font-size: 14px;
+        background-position: -134px -190px;
+
+        i {
+          width: 9px;
+          height: 19px;
+          background-position: -191px -190px;
+        }
+      }
+
+      .sex-icon {
+        float: left;
+        width: 20px;
+        height: 20px;
+        margin: 9px 0 0 8px;
+        background: url(../img/icon.png) no-repeat;
+        background-position: -41px -57px;
+      }
+    }
+
+    .myPage-edit {
+      float: right;
+      margin-top: 4px;
+
+      a {
+        height: 31px;
+        line-height: 31px;
+        padding: 0 5px 0 0;
+        background-position: right -99px;
+
+        i {
+          display: inline-block;
+          font-size: 12px;
+          width: 107px;
+          height: 31px;
+          line-height: 31px;
+          padding: 0 15px 0 20px;
+          color: #333;
+          background-position: 0 -59px;
+        }
+      }
+    }
+  }
+
+  .location,
+  .social-network {
+    margin-bottom: 5px;
+    line-height: 21px;
+  }
+
+  .social-network {
+    span {
+      line-height: 21px;
+    }
+
+    ul {
+      margin-left: 8px;
+
+      li {
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.myPage-status {
+  height: 41px;
+  margin-bottom: 15px;
+
+  li {
+    float: left;
+    padding: 0 40px 0 20px;
+    margin-top: -4px;
+    border-left: 1px solid #e4e4e4;
+
+    a {
+      display: block;
+      color: #666;
+
+      &:hover {
+        color: #0c73c2;
+      }
+    }
+
+    em {
+      display: block;
+      font-size: 24px;
+      background: none;
+    }
+
+    span {
+      text-indent: 2px;
+    }
+  }
+
+  .user-event-li {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+
+.listen-list {
+  margin-bottom: 36px;
+
+  ul {
+    border: 1px solid #e2e2e2;
+    border-top: none;
+  }
+
+  ul li {
+    position: relative;
+    height: 38px;
+    line-height: 38px;
+
+    .songNum {
+      float: left;
+      width: 72px;
+      height: 38px;
+      overflow: hidden;
+
+      .songNum-icon {
+        float: right;
+        width: 17px;
+        height: 17px;
+        margin-top: 10px;
+        cursor: pointer;
+        background-position: 0 -103px;
+      }
+
+      .num {
+        float: left;
+        width: 50px;
+        padding-right: 8px;
+        text-align: right;
+        overflow: hidden;
+        font-size: 16px;
+        color: #666;
+      }
+    }
+
+    .songTitle {
+      float: left;
+      width: 480px;
+      height: 38px;
+      z-index: 1;
+      zoom: 1;
+      padding-left: 10px;
+      overflow: hidden;
+
+      .song-title span {
+        color: #aeaeae;
+        overflow: hidden;
+
+        a {
+          color: #aeaeae;
+        }
+
+        .song {
+          font-weight: 700;
+          color: #333;
+        }
+
+        em {
+          margin: 0 5px 0 8px;
+        }
+      }
+    }
+
+    .songTop {
+      position: relative;
+      float: right;
+      width: 319px;
+      height: 38px;
+      z-index: 1;
+      zoom: 1;
+      line-height: 38px;
+
+      .songTop-bg {
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 38px;
+        padding-left: 10px;
+        background-color: #4eb4f5;
+        opacity: 0.1;
+      }
+
+      em {
+        position: absolute;
+        left: 10px;
+        color: #666;
+        background: none;
+      }
+    }
+
+    #odd {
+      display: none;
+    }
+
+    .listenListMask1,
+    .listenListMask2 {
+      width: 100%;
+      height: 100%;
+    }
+
+    .listenListMask1 {
+      background-color: #e6e6e6;
+    }
+
+    .listenListMask2 {
+      background-color: #fff;
+    }
+  }
+}
+
+.listen-list-more {
+  height: 32px;
+  line-height: 32px;
+  text-align: right;
+}
+
+.creatList-color {
+  position: relative;
+  color: #333;
+}
+
+.creatList,
+.collectList {
+  margin: 20px 0 0 -50px;
+  height: 195px;
+
+  li {
+    float: left;
+    height: 165px;
+    padding: 0 0 30px 50px;
+    line-height: 1.4;
+
+    .creatList-box {
+      position: relative;
+      width: 140px;
+      height: 140px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      .creatList-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      div {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 27px;
+        background-position: 0 -537px;
+        color: #ccc;
+
+        a {
+          position: absolute;
+          right: 10px;
+          bottom: 5px;
+          width: 16px;
+          height: 17px;
+          background-position: 0 0;
+        }
+
+        span {
+          float: left;
+          width: 14px;
+          height: 11px;
+          background-position: 0 -24px;
+          margin: 9px 5px 9px 10px;
+        }
+
+        p {
+          float: left;
+          margin: 7px 0 0 0;
+          font-size: 12px;
+          color: #ccc;
+        }
+      }
+    }
+
+    p {
+      margin: 8px 0 3px;
+      font-size: 14px;
+
+      a {
+        color: #000;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+.color2 {
+  background-color: plum;
+}

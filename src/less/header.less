@@ -1,0 +1,214 @@
+@import "./variable.less";
+// 头部
+nav {
+  display: flex;
+
+  a {
+    position: relative;
+    padding: 25px 19px;
+    color: #ccc;
+  }
+
+  p {
+    width: 177px;
+    cursor: pointer;
+  }
+
+  .hot {
+    position: absolute;
+    top: 21px;
+    left: 100px;
+    width: 35px;
+    height: 19px;
+    background-position: -190px 0;
+  }
+}
+
+.header-top {
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  background: #242424;
+  border: 1px solid #000;
+
+  .header-right {
+    position: relative;
+    width: 332px;
+    margin-left: 85px;
+
+    span,
+    .creator,
+    button,
+    .avatar {
+      position: absolute;
+      right: 0;
+    }
+
+    span {
+      left: 0;
+      width: 158px;
+      background-color: #fff;
+      border-radius: 32px;
+
+      em {
+        width: 30px;
+        height: 32px;
+        background-position: 0 -99px;
+      }
+
+      input {
+        width: 121px;
+        color: #9b9b9b;
+        border: 0;
+      }
+    }
+
+    .creator {
+      right: 50px;
+      width: 90px;
+      height: 32px;
+      color: #ccc;
+      text-align: center;
+      line-height: 32px;
+      border: 1px solid #4f4f4f;
+      border-radius: 20px;
+
+      &:hover {
+        color: #fff;
+        border-color: #fff;
+      }
+    }
+  }
+
+  button {
+    background: none;
+    border: 0;
+    color: #787878;
+
+    &:hover {
+      color: #ccc;
+      text-decoration: underline;
+    }
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-bottom {
+  width: 100%;
+  height: 35px;
+  background-color: #c20c0c;
+  border-bottom: 1px solid #a40011;
+
+  .bottom-nav {
+    margin-left: 585px;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    float: left;
+    width: 84px;
+    height: 34px;
+    color: #fff;
+  }
+}
+
+.second-content {
+  width: 100%;
+  height: 5px;
+  background-color: #c20c0c;
+}
+
+// 用户头像
+.avatar {
+  display: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 30px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+  }
+}
+
+.login-icon {
+  position: absolute;
+  top: 15px;
+  right: -2px;
+  width: 29px;
+  height: 8px;
+  background: url(../img/toplist.png) no-repeat;
+  background-position: -15px 0;
+  z-index: 4;
+}
+
+.user-nav {
+  display: none;
+}
+// 用户-二级导航栏
+.user-nav-jump ul {
+  position: absolute;
+  top: 57px;
+  left: 74%;
+  width: 158px;
+  background-color: #2b2b2b;
+  border: 1px solid #202020;
+  box-shadow: 0 8px 24px 0 rgba(0, 0, 0, 0.5);
+  border-radius: 4px;
+  z-index: 3;
+
+  li {
+    width: 100%;
+    height: 34px;
+
+    &:hover {
+      background-color: #353535;
+    }
+
+    em {
+      float: left;
+      width: 18px;
+      height: 18px;
+      margin: 7px 10px 0 24px;
+      background-position: 0 -80px;
+    }
+
+    .user-nav-icon2 {
+      background-position: -20px -120px;
+    }
+
+    .user-nav-icon3 {
+      background-position: 0 -100px;
+    }
+
+    .user-nav-icon4 {
+      background-position: 0 -221px;
+    }
+
+    .user-nav-icon5 {
+      background-position: 0 -140px;
+    }
+
+    .user-nav-icon6 {
+      background-position: -20px -142px;
+    }
+
+    .user-nav-icon7 {
+      background-position: 0 -200px;
+    }
+  }
+
+  a {
+    float: left;
+    margin-top: 6px;
+    font-size: 14px;
+    color: #ccc;
+  }
+}

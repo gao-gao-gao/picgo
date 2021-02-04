@@ -1,0 +1,238 @@
+.login {
+  position: absolute;
+  top: 110px;
+  left: 34%;
+  width: 530px;
+  border-radius: 4px;
+  background-color: #fff;
+  box-shadow: 0 5px 16px rgba(0, 0, 0.8);
+  z-index: 5;
+}
+
+.login-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 39px;
+  padding-left: 18px;
+  color: #fff;
+  background-color: #2d2d2d;
+  border: 1px solid #191919;
+
+  span {
+    margin-left: 455px;
+  }
+}
+
+// 扫码登录
+.code-login {
+  height: 295px;
+
+  .code-top {
+    width: 100%;
+    height: 220px;
+    margin: 38px 0 20px;
+    padding-left: 101px;
+
+    .code-bg {
+      float: left;
+      width: 125px;
+      height: 220px;
+    }
+
+    .code-main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: space-between;
+      position: relative;
+      float: left;
+      color: #333;
+      width: 220px;
+      height: 205px;
+      margin-left: 25px;
+
+      .code-fail {
+        display: none;
+        position: absolute;
+        top: 38px;
+        width: 138px;
+        height: 138px;
+        background: rgba(255, 255, 255, 0.9);
+
+        p {
+          width: 100%;
+          margin: 45px 0 6px;
+          text-align: center;
+          color: #333;
+        }
+
+        a {
+          display: block;
+          width: 66px;
+          height: 26px;
+          margin: 0 auto;
+          background: linear-gradient(180deg, #81dd81 0%, #55a055 100%);
+          color: #fff;
+          text-align: center;
+          line-height: 26px;
+          border: 1px solid #5baf5b;
+          border-radius: 4px;
+          box-shadow: inset 0 -1px 1px 1px rgba(185, 230, 185, 0.31);
+        }
+      }
+
+      h3 {
+        width: 100%;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+      }
+
+      .code,
+      img {
+        width: 138px;
+        height: 138px;
+      }
+
+      a {
+        color: #0c73c2;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .code-bottom {
+    display: block;
+    width: 120px;
+    height: 30px;
+    margin: 0 auto;
+    color: #333;
+    text-align: center;
+    line-height: 30px;
+    border: 1px solid #979797;
+    border-radius: 15px;
+  }
+}
+
+// 登录内容
+.login-main {
+  position: relative;
+  height: 332px;
+
+  .main-top {
+    width: 100%;
+    height: 100%;
+    padding: 40px 0 39px;
+
+    .login-login {
+      flex-wrap: wrap;
+      align-content: space-between;
+      float: left;
+      width: 300px;
+      height: 205px;
+      border-right: 1px dotted #ccc;
+
+      img {
+        height: 120px;
+      }
+
+      a {
+        display: block;
+        width: 219px;
+        height: 31px;
+      }
+
+      .phone-number-login {
+        background-position: 0 -551px;
+      }
+    }
+
+    .login-icon {
+      float: left;
+      width: 180px;
+      height: 222px;
+      padding: 3px 0 3px 39px;
+      margin-top: -15px;
+    }
+
+    .login-check {
+      float: left;
+      width: 279px;
+      height: 16px;
+      margin: 30px 0 0 40px;
+      color: rgba(0, 0, 0, 0.4);
+
+      input {
+        width: 13px;
+        height: 13px;
+        border: 1px solid #767676;
+        border-radius: 3px;
+      }
+
+      a {
+        color: #507daf;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .code-link {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    bottom: 0;
+    right: 0;
+    background: url(../img/qr_login_icon.png) no-repeat;
+    background-size: contain;
+    cursor: pointer;
+  }
+}
+
+.scan-success {
+  flex-wrap: wrap;
+  align-content: center;
+  width: 156px;
+  height: 333px;
+  margin: auto;
+  background-color: #fff;
+
+  img {
+    width: 140px;
+    height: 140px;
+  }
+
+  h2 {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 450;
+    line-height: 24px;
+    color: rgba(0, 0, 0, 0.8);
+  }
+
+  p {
+    color: #333;
+    margin-top: 4px;
+    margin-bottom: 30px;
+    font-size: 14px;
+  }
+
+  a {
+    display: block;
+    width: 118px;
+    height: 28px;
+    padding-right: 0;
+    font-size: 12px;
+    border: 1px solid #979797;
+    border-radius: 15px;
+    line-height: 28px;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.8);
+  }
+}
