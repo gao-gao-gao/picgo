@@ -19,7 +19,7 @@ function GetAnchor(props) {
 class Anchor extends React.Component {
   constructor() {
     super();
-    this.state = { SingerList: [] };
+    this.state = { singerlist: [] };
   }
   componentDidMount() {
     axios
@@ -41,12 +41,12 @@ class Anchor extends React.Component {
         }),
       ])
       .then((res) => {
-        this.setState({ SingerList: res });
+        this.setState({ singerlist: res });
       });
   }
   render() {
-    const { SingerList = [] } = this.state;
-    return <GetAnchor list={SingerList}></GetAnchor>;
+    const { singerlist = [] } = this.state;
+    return <GetAnchor list={singerlist}></GetAnchor>;
   }
 }
 export default Anchor;

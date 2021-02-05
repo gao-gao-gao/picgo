@@ -24,13 +24,13 @@ function GetBannerImg(props) {
   const { imageUrl = "" } = props.list[props.index]
     ? props.list[props.index]
     : props.list;
-  const circle = props.list.map((item, index) => {
+  const circle = props.list.map((item, i) => {
     return (
       <li
-        key={index}
-        onClick={(e) => props.change(e, index)}
+        key={i}
+        onClick={(e) => props.change(e, i)}
         style={{
-          backgroundPosition: props.index === index ? "-16px -343px" : "",
+          backgroundPosition: props.i === i ? "-16px -343px" : "",
         }}
       ></li>
     );
@@ -46,17 +46,17 @@ function GetBannerImg(props) {
 class Banner extends React.Component {
   constructor() {
     super();
-    this.state = { ImgList: [], ImgIndex: 2 };
+    this.state = { imglist: [], imgindex: 2 };
   }
 
   componentDidMount() {
     this.timer = setInterval(() => {
-      this.setState({ ImgIndex: (this.state.ImgIndex + 1) % 10 });
+      this.setState({ imgindex: (this.state.imgindex + 1) % 10 });
     }, 2000);
 
     GetApi("banner").then((res) => {
       console.log(res.data.banners);
-      this.setState({ ImgList: res.data.banners });
+      this.setState({ imglist: res.data.banners });
     });
   }
 
@@ -66,32 +66,32 @@ class Banner extends React.Component {
 
   start() {
     this.timer = setInterval(() => {
-      this.setState({ ImgIndex: (this.state.ImgIndex + 1) % 10 });
+      this.setState({ imgindex: (this.state.imgindex + 1) % 10 });
     }, 2000);
   }
 
   right() {
     clearInterval(this.timer);
-    this.setState({ ImgIndex: (this.state.ImgIndex + 1) % 10 });
+    this.setState({ imgindex: (this.state.imgindex + 1) % 10 });
   }
 
   left() {
     clearInterval(this.timer);
-    this.setState({ ImgIndex: (this.state.ImgIndex + 9) % 10 });
+    this.setState({ imgindex: (this.state.imgindex + 9) % 10 });
   }
 
-  change = (e, index) => {
+  change = (e, i) => {
     e.preventDefault();
-    console.log(index);
-    this.setState({ ImgIndex: index });
+    console.log(i);
+    this.setState({ imgindex: i });
   };
 
   render() {
-    const { ImgList = [], ImgIndex = 0 } = this.state;
+    const { imglist = [], imgindex = 0 } = this.state;
     return (
       <>
         <section className="banner">
-          <GetBannerImgBg list={ImgList} index={ImgIndex}></GetBannerImgBg>
+          <GetBannerImgBg list={imglist} index={imgindex}></GetBannerImgBg>
           <div className="carousel-main">
             <div
               className="slider"
@@ -99,8 +99,9 @@ class Banner extends React.Component {
               onMouseLeave={this.start.bind(this)}
             >
               <GetBannerImg
-                list={ImgList}
-                index={ImgIndex}
+                list={imglist}
+                index={imgindex}
+                i={imgindex}
                 change={this.change}
               ></GetBannerImg>
             </div>

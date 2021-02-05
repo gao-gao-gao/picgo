@@ -19,7 +19,7 @@ function GetSinger(props) {
 class Singer extends React.Component {
   constructor() {
     super();
-    this.state = { SingerList: [] };
+    this.state = { singerlist: [] };
   }
   componentDidMount() {
     axios
@@ -41,12 +41,12 @@ class Singer extends React.Component {
         }),
       ])
       .then((res) => {
-        this.setState({ SingerList: res });
+        this.setState({ singerlist: res });
       });
   }
   render() {
-    const { SingerList = [] } = this.state;
-    return <GetSinger list={SingerList}></GetSinger>;
+    const { singerlist = [] } = this.state;
+    return <GetSinger list={singerlist}></GetSinger>;
   }
 }
 export default Singer;
