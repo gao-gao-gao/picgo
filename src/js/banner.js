@@ -34,6 +34,9 @@ class Banner extends React.Component {
   }
 
   componentDidMount() {
+    // const time = setInterval(() => {
+    //   this.setState({ ImgIndex: (this.state.ImgIndex + 1) % 10 });
+    // }, 2000);
     GetApi("banner").then((res) => {
       console.log(res.data.banners);
       this.setState({ ImgList: res.data.banners });
@@ -45,9 +48,7 @@ class Banner extends React.Component {
     return (
       <>
         <section className="banner">
-          <div className="filter">
-            <GetBannerImgBg list={ImgList} index={ImgIndex}></GetBannerImgBg>
-          </div>
+          <GetBannerImgBg list={ImgList} index={ImgIndex}></GetBannerImgBg>
           <div className="carousel-main">
             <div className="slider">
               <GetBannerImg list={ImgList} index={ImgIndex}></GetBannerImg>

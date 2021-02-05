@@ -24,19 +24,19 @@ class Anchor extends React.Component {
   componentDidMount() {
     axios
       .all([
-        GetApi("user/detail?timerstamp=" + new Date().getTime(), {
+        GetApi("user/detail?num=" + Math.random(), {
           uid: 278438485,
         }),
-        GetApi("user/detail?timerstamp=" + new Date().getTime(), {
+        GetApi("user/detail?num=" + Math.random(), {
           uid: 91239965,
         }),
-        GetApi("user/detail?timerstamp=" + new Date().getTime(), {
+        GetApi("user/detail?num=" + Math.random(), {
           uid: 324314596,
         }),
-        GetApi("user/detail?timerstamp=" + new Date().getTime(), {
+        GetApi("user/detail?num=" + Math.random(), {
           uid: 1611157,
         }),
-        GetApi("user/detail?timerstamp=" + new Date().getTime(), {
+        GetApi("user/detail?num=" + Math.random(), {
           uid: 2313954,
         }),
       ])

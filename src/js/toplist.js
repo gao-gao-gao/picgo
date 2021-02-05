@@ -75,17 +75,17 @@ class Toplist extends React.Component {
     GetApi("toplist").then((res) => {
       this.setState({ toplist: res.data.list });
     });
-    GetApi("playlist/detail?timerstamp=" + new Date().getTime(), {
+    GetApi("playlist/detail?num=" + Math.random(), {
       id: 19723756,
     }).then((res) => {
       this.setState({ name1: res.data.playlist.tracks });
     });
-    GetApi("playlist/detail?timerstamp=" + new Date().getTime(), {
+    GetApi("playlist/detail?num=" + Math.random(), {
       id: 3779629,
     }).then((res) => {
       this.setState({ name2: res.data.playlist.tracks });
     });
-    GetApi("playlist/detail?timerstamp=" + new Date().getTime(), {
+    GetApi("playlist/detail?num=" + Math.random(), {
       id: 2884035,
     }).then((res) => {
       this.setState({ name3: res.data.playlist.tracks });

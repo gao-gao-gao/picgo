@@ -1,7 +1,4 @@
 @import "./variable.less";
-#root {
-  width: 1920px;
-}
 // 轮播图
 .filter {
   overflow: hidden;
@@ -15,16 +12,13 @@
   filter: blur(80px);
   background-position: center center;
 }
-.banner {
-  position: relative;
-}
+
 .carousel-main {
-  position: absolute;
-  top: 0;
+  position: relative;
   width: 982px;
-  left: 25%;
-  margin-left: -11px;
   height: 285px;
+  margin: auto;
+  margin-top: -284px;
 
   .slider {
     position: absolute;
@@ -243,6 +237,7 @@
               margin-left: 11px;
               width: 118px;
               height: 150px;
+              background-position: -260px 100px;
             }
 
             img,
@@ -265,6 +260,7 @@
             p {
               position: absolute;
               top: 107px;
+              width: 107px;
               color: #000;
             }
 
