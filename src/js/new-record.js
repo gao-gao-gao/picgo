@@ -21,7 +21,7 @@ function GetNewRecord(props) {
 class NewRecord extends React.Component {
   constructor() {
     super();
-    this.state = { ImgList: [] };
+    this.state = { imglist: [] };
   }
 
   componentDidMount() {
@@ -44,17 +44,17 @@ class NewRecord extends React.Component {
         }),
       ])
       .then((res) => {
-        this.setState({ ImgList: res });
+        this.setState({ imglist: res });
       });
   }
 
   render() {
-    const { ImgList = [] } = this.state;
+    const { imglist = [] } = this.state;
     return (
       <div className="new-record">
         <div className="new-record-roll">
           <div className="roll">
-            <GetNewRecord img={ImgList}></GetNewRecord>
+            <GetNewRecord img={imglist}></GetNewRecord>
             <ul className="u2"></ul>
             <ul className="u3"></ul>
             <ul className="u4"></ul>
